@@ -248,7 +248,7 @@
             // DGUser
             // 
             this.DGUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGUser.Location = new System.Drawing.Point(31, 408);
+            this.DGUser.Location = new System.Drawing.Point(12, 395);
             this.DGUser.Name = "DGUser";
             this.DGUser.Size = new System.Drawing.Size(1130, 127);
             this.DGUser.TabIndex = 22;
