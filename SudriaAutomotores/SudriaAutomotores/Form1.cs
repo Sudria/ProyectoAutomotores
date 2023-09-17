@@ -30,7 +30,7 @@ namespace SudriaAutomotores
 
         private void BAdd_Click(object sender, EventArgs e)
         {
-            string Name = TBNombre.Text;
+            string Name = TBNombre.Text  char.IsDigit;
             string Surname = TBApellido.Text;
             string Dni = TBDni.Text;
             bool Sex =  RBMale.Checked ? true : false ;
@@ -40,9 +40,7 @@ namespace SudriaAutomotores
             string Password = TBPass.Text;
             int Rol = CBUser.SelectedIndex;
 
-            Class.User user1 = new Class.User(Name,Surname,Dni,Sex,Tel,Birthdate,Email,Password,Rol+1);
-
-
+            Class.User user1 = new Class.User(Name, Surname, Dni, Sex, Tel, Birthdate, Email, Password, Rol + 1);
             user1.PutUser();
             user1.GetUsers(DGUser);
 
