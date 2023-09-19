@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SudriaAutomotores",
+    "\\SudriaAutomotores\\SudriaAutomotores"
   ],
+  "SelectedNode": "\\SudriaAutomotores\\SudriaAutomotores\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
