@@ -12,22 +12,15 @@ namespace SudriaAutomotores
 {
     public partial class Form1 : Form
     {
+        int IdUser;
         public Form1()
         {
-
             InitializeComponent();
             Class.User user = new Class.User();
             user.GetUsers(DGUser);
             CBUser.SelectedIndex = 0;
 
         }
-
-        private void Connect_Click(object sender, EventArgs e)
-        {
-            Class.Db db = new Class.Db();
-            db.startConnection();
-        }
-
         private void BAdd_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +33,7 @@ namespace SudriaAutomotores
                     string Dni = TBDni.Text;
                     bool Sex = RBMale.Checked ? true : false;
                     string Tel = TBTel.Text;
-                    string Birthdate = date.Text;
+                    string Birthdate = Date.Text;
                     string Email = TBEmail.Text;
                     string Password = TBPass.Text;
                     int Rol = CBUser.SelectedIndex;
@@ -131,5 +124,53 @@ namespace SudriaAutomotores
                 MessageBox.Show("Sólo se admiten datos numéricos", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void BMod_Click(object sender, EventArgs e)
+        {
+            string Name = TBNombre.Text;
+            string Surname = TBApellido.Text;
+            string Dni = TBDni.Text;
+            bool Sex = RBMale.Checked ? true : false;
+            string Tel = TBTel.Text;
+            string Birthdate = Date.Text;
+            string Email = TBEmail.Text;
+            string Password = TBPass.Text;
+            int Rol = CBUser.SelectedIndex;
+
+            Class.User user1 = new Class.User(IdUser,Name, Surname, Dni, Sex, Tel, Birthdate, Email, Password, Rol + 1);
+            user1.ModifyUser();
+            user1.GetUsers(DGUser);
+
+        }
+
+        private void BDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DGUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdUser = int.Parse(DGUser.CurrentRow.Cells[0].Value.ToString());
+            TBNombre.Text = DGUser.CurrentRow.Cells[1].Value.ToString();
+            TBApellido.Text = DGUser.CurrentRow.Cells[2].Value.ToString();
+            if(DGUser.CurrentRow.Cells[3].Value.ToString().Equals("1"))
+            {
+                RBMale.Checked = true;
+                RBFemale.Checked = false;
+            }
+            else {
+                RBMale.Checked = false;
+                RBFemale.Checked = true;
+            }
+            TBPass.Text = "";
+            TBRepeatP.Text = "";
+            Date.Text = DGUser.CurrentRow.Cells[4].Value.ToString();
+            TBDni.Text = DGUser.CurrentRow.Cells[5].Value.ToString();
+            TBEmail.Text = DGUser.CurrentRow.Cells[6].Value.ToString();
+            TBTel.Text = DGUser.CurrentRow.Cells[8].Value.ToString();
+            CBUser.SelectedIndex = int.Parse(DGUser.CurrentRow.Cells[10].Value.ToString()) - 1;
+        }
+
+      
     }
 }

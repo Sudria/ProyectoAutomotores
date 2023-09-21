@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Connect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,23 +46,14 @@
             this.TBPass = new System.Windows.Forms.TextBox();
             this.TBRepeatP = new System.Windows.Forms.TextBox();
             this.TBTel = new System.Windows.Forms.TextBox();
-            this.date = new System.Windows.Forms.DateTimePicker();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.BAdd = new System.Windows.Forms.Button();
             this.BDelete = new System.Windows.Forms.Button();
             this.DGUser = new System.Windows.Forms.DataGridView();
             this.CBUser = new System.Windows.Forms.ComboBox();
+            this.BMod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Connect
-            // 
-            this.Connect.Location = new System.Drawing.Point(404, 316);
-            this.Connect.Name = "Connect";
-            this.Connect.Size = new System.Drawing.Size(75, 23);
-            this.Connect.TabIndex = 0;
-            this.Connect.Text = "Conectar";
-            this.Connect.UseVisualStyleBackColor = true;
-            this.Connect.Click += new System.EventHandler(this.Connect_Click);
             // 
             // label1
             // 
@@ -153,7 +143,7 @@
             this.RBMale.Location = new System.Drawing.Point(186, 74);
             this.RBMale.Name = "RBMale";
             this.RBMale.Size = new System.Drawing.Size(73, 17);
-            this.RBMale.TabIndex = 10;
+            this.RBMale.TabIndex = 3;
             this.RBMale.TabStop = true;
             this.RBMale.Text = "Masculino";
             this.RBMale.UseVisualStyleBackColor = true;
@@ -164,7 +154,7 @@
             this.RBFemale.Location = new System.Drawing.Point(186, 98);
             this.RBFemale.Name = "RBFemale";
             this.RBFemale.Size = new System.Drawing.Size(71, 17);
-            this.RBFemale.TabIndex = 11;
+            this.RBFemale.TabIndex = 4;
             this.RBFemale.TabStop = true;
             this.RBFemale.Text = "Femenino";
             this.RBFemale.UseVisualStyleBackColor = true;
@@ -174,64 +164,64 @@
             this.TBApellido.Location = new System.Drawing.Point(186, 46);
             this.TBApellido.Name = "TBApellido";
             this.TBApellido.Size = new System.Drawing.Size(100, 20);
-            this.TBApellido.TabIndex = 12;
+            this.TBApellido.TabIndex = 2;
             // 
             // TBNombre
             // 
             this.TBNombre.Location = new System.Drawing.Point(186, 19);
             this.TBNombre.Name = "TBNombre";
             this.TBNombre.Size = new System.Drawing.Size(100, 20);
-            this.TBNombre.TabIndex = 13;
+            this.TBNombre.TabIndex = 1;
             // 
             // TBDni
             // 
             this.TBDni.Location = new System.Drawing.Point(186, 156);
             this.TBDni.Name = "TBDni";
             this.TBDni.Size = new System.Drawing.Size(100, 20);
-            this.TBDni.TabIndex = 14;
+            this.TBDni.TabIndex = 6;
             // 
             // TBEmail
             // 
             this.TBEmail.Location = new System.Drawing.Point(186, 183);
             this.TBEmail.Name = "TBEmail";
             this.TBEmail.Size = new System.Drawing.Size(100, 20);
-            this.TBEmail.TabIndex = 15;
+            this.TBEmail.TabIndex = 7;
             // 
             // TBPass
             // 
             this.TBPass.Location = new System.Drawing.Point(185, 217);
             this.TBPass.Name = "TBPass";
             this.TBPass.Size = new System.Drawing.Size(100, 20);
-            this.TBPass.TabIndex = 16;
+            this.TBPass.TabIndex = 8;
             // 
             // TBRepeatP
             // 
             this.TBRepeatP.Location = new System.Drawing.Point(411, 218);
             this.TBRepeatP.Name = "TBRepeatP";
             this.TBRepeatP.Size = new System.Drawing.Size(100, 20);
-            this.TBRepeatP.TabIndex = 17;
+            this.TBRepeatP.TabIndex = 9;
             // 
             // TBTel
             // 
             this.TBTel.Location = new System.Drawing.Point(186, 259);
             this.TBTel.Name = "TBTel";
             this.TBTel.Size = new System.Drawing.Size(100, 20);
-            this.TBTel.TabIndex = 18;
+            this.TBTel.TabIndex = 10;
             // 
-            // date
+            // Date
             // 
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date.Location = new System.Drawing.Point(186, 126);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(100, 20);
-            this.date.TabIndex = 19;
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(186, 126);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(100, 20);
+            this.Date.TabIndex = 5;
             // 
             // BAdd
             // 
             this.BAdd.Location = new System.Drawing.Point(66, 316);
             this.BAdd.Name = "BAdd";
             this.BAdd.Size = new System.Drawing.Size(75, 23);
-            this.BAdd.TabIndex = 20;
+            this.BAdd.TabIndex = 12;
             this.BAdd.Text = "Agregar";
             this.BAdd.UseVisualStyleBackColor = true;
             this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
@@ -241,9 +231,10 @@
             this.BDelete.Location = new System.Drawing.Point(188, 316);
             this.BDelete.Name = "BDelete";
             this.BDelete.Size = new System.Drawing.Size(75, 23);
-            this.BDelete.TabIndex = 21;
+            this.BDelete.TabIndex = 13;
             this.BDelete.Text = "Borrar";
             this.BDelete.UseVisualStyleBackColor = true;
+            this.BDelete.Click += new System.EventHandler(this.BDelete_Click);
             // 
             // DGUser
             // 
@@ -252,6 +243,7 @@
             this.DGUser.Name = "DGUser";
             this.DGUser.Size = new System.Drawing.Size(1130, 127);
             this.DGUser.TabIndex = 22;
+            this.DGUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUser_CellDoubleClick);
             // 
             // CBUser
             // 
@@ -263,18 +255,29 @@
             this.CBUser.Location = new System.Drawing.Point(411, 259);
             this.CBUser.Name = "CBUser";
             this.CBUser.Size = new System.Drawing.Size(100, 21);
-            this.CBUser.TabIndex = 23;
+            this.CBUser.TabIndex = 11;
+            // 
+            // BMod
+            // 
+            this.BMod.Location = new System.Drawing.Point(411, 316);
+            this.BMod.Name = "BMod";
+            this.BMod.Size = new System.Drawing.Size(75, 23);
+            this.BMod.TabIndex = 14;
+            this.BMod.Text = "Modificar";
+            this.BMod.UseVisualStyleBackColor = true;
+            this.BMod.Click += new System.EventHandler(this.BMod_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 614);
+            this.Controls.Add(this.BMod);
             this.Controls.Add(this.CBUser);
             this.Controls.Add(this.DGUser);
             this.Controls.Add(this.BDelete);
             this.Controls.Add(this.BAdd);
-            this.Controls.Add(this.date);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.TBTel);
             this.Controls.Add(this.TBRepeatP);
             this.Controls.Add(this.TBPass);
@@ -293,7 +296,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Connect);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DGUser)).EndInit();
@@ -303,8 +305,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Connect;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -323,11 +323,12 @@
         private System.Windows.Forms.TextBox TBPass;
         private System.Windows.Forms.TextBox TBRepeatP;
         private System.Windows.Forms.TextBox TBTel;
-        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Button BAdd;
         private System.Windows.Forms.Button BDelete;
         private System.Windows.Forms.DataGridView DGUser;
         private System.Windows.Forms.ComboBox CBUser;
+        private System.Windows.Forms.Button BMod;
     }
 }
 
