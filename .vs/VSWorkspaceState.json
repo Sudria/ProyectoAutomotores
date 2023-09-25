@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\SudriaAutomotores",
-    "\\SudriaAutomotores\\SudriaAutomotores"
+    "\\SudriaAutomotores\\SudriaAutomotores",
+    "\\SudriaAutomotores\\SudriaAutomotores\\Class",
+    "\\SudriaAutomotores\\SudriaAutomotores\\obj"
   ],
-  "SelectedNode": "\\SudriaAutomotores\\SudriaAutomotores\\Form1.cs",
+  "SelectedNode": "\\SudriaAutomotores\\SudriaAutomotores\\Class\\User.cs",
   "PreviewInSolutionExplorer": false
 }
